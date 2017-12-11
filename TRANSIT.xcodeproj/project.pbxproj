@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2204C6511FDBF1C600510813 /* FirebaseStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204C6501FDBF1C600510813 /* FirebaseStation.swift */; };
+		2204C6531FDBFDD900510813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2204C6521FDBFDD900510813 /* Media.xcassets */; };
+		222042231FD81DFF0009DE4D /* URLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222042221FD81DFF0009DE4D /* URLHelpers.swift */; };
+		2253E1211FD6F020000C776B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E1201FD6F020000C776B /* User.swift */; };
+		2275B8131FD7DF6B00117948 /* StopInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2275B8121FD7DF6B00117948 /* StopInfo.swift */; };
+		2275B8151FD7EDD100117948 /* StopArrivalTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2275B8141FD7EDD100117948 /* StopArrivalTimes.swift */; };
+		2275B8171FD7F5A100117948 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2275B8161FD7F5A100117948 /* RequestController.swift */; };
 		227848FE1FD556E500C3EFF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227848FD1FD556E500C3EFF0 /* AppDelegate.swift */; };
-		227849001FD556E500C3EFF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227848FF1FD556E500C3EFF0 /* ViewController.swift */; };
 		227849031FD556E500C3EFF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227849011FD556E500C3EFF0 /* Main.storyboard */; };
-		227849051FD556E500C3EFF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227849041FD556E500C3EFF0 /* Assets.xcassets */; };
 		227849081FD556E500C3EFF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227849061FD556E500C3EFF0 /* LaunchScreen.storyboard */; };
-		227849131FD556E600C3EFF0 /* TRANSITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227849121FD556E600C3EFF0 /* TRANSITTests.swift */; };
-		2278491E1FD556E600C3EFF0 /* TRANSITUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278491D1FD556E600C3EFF0 /* TRANSITUITests.swift */; };
+		227849401FD5759C00C3EFF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278493F1FD5759C00C3EFF0 /* LoginViewController.swift */; };
+		227849451FD57D7C00C3EFF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 227849441FD57D7C00C3EFF0 /* GoogleService-Info.plist */; };
+		227849471FD57FD400C3EFF0 /* FindStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227849461FD57FD400C3EFF0 /* FindStationViewController.swift */; };
+		227849491FD585AC00C3EFF0 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227849481FD585AC00C3EFF0 /* ResultsTableViewController.swift */; };
+		2278494B1FD585CB00C3EFF0 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278494A1FD585CB00C3EFF0 /* StationDetailViewController.swift */; };
+		22FAA7731FDD9AB5006DEDDC /* arrivalTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FAA7721FDD9AB5006DEDDC /* arrivalTimeTableViewCell.swift */; };
+		7B2F7F24B0AAFABFE98CE427 /* libPods-TRANSIT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 239FCA14461FEC7D32BF409D /* libPods-TRANSIT.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +44,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2204C6501FDBF1C600510813 /* FirebaseStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStation.swift; sourceTree = "<group>"; };
+		2204C6521FDBFDD900510813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		222042221FD81DFF0009DE4D /* URLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelpers.swift; sourceTree = "<group>"; };
+		2253E11F1FD6ED5D000C776B /* TRANSIT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TRANSIT.entitlements; sourceTree = "<group>"; };
+		2253E1201FD6F020000C776B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2275B8121FD7DF6B00117948 /* StopInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfo.swift; sourceTree = "<group>"; };
+		2275B8141FD7EDD100117948 /* StopArrivalTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopArrivalTimes.swift; sourceTree = "<group>"; };
+		2275B8161FD7F5A100117948 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
 		227848FA1FD556E500C3EFF0 /* TRANSIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRANSIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227848FD1FD556E500C3EFF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		227848FF1FD556E500C3EFF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		227849021FD556E500C3EFF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		227849041FD556E500C3EFF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		227849071FD556E500C3EFF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227849091FD556E500C3EFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2278490E1FD556E600C3EFF0 /* TRANSITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRANSITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		227849121FD556E600C3EFF0 /* TRANSITTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRANSITTests.swift; sourceTree = "<group>"; };
-		227849141FD556E600C3EFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227849191FD556E600C3EFF0 /* TRANSITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRANSITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2278491D1FD556E600C3EFF0 /* TRANSITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRANSITUITests.swift; sourceTree = "<group>"; };
-		2278491F1FD556E600C3EFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2278493F1FD5759C00C3EFF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		227849441FD57D7C00C3EFF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		227849461FD57FD400C3EFF0 /* FindStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindStationViewController.swift; path = TRANSIT/Controllers/FindStationViewController.swift; sourceTree = SOURCE_ROOT; };
+		227849481FD585AC00C3EFF0 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsTableViewController.swift; path = TRANSIT/Controllers/ResultsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		2278494A1FD585CB00C3EFF0 /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
+		22FAA7721FDD9AB5006DEDDC /* arrivalTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arrivalTimeTableViewCell.swift; sourceTree = "<group>"; };
+		239FCA14461FEC7D32BF409D /* libPods-TRANSIT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRANSIT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BEBDD15FF442FADFC38F229 /* Pods-TRANSIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRANSIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRANSIT/Pods-TRANSIT.debug.xcconfig"; sourceTree = "<group>"; };
+		AACE7FFA7E3B4A1416237765 /* Pods-TRANSIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRANSIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRANSIT/Pods-TRANSIT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2F7F24B0AAFABFE98CE427 /* libPods-TRANSIT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195C603DAECAA977A2192E45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BEBDD15FF442FADFC38F229 /* Pods-TRANSIT.debug.xcconfig */,
+				AACE7FFA7E3B4A1416237765 /* Pods-TRANSIT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		227848F11FD556E500C3EFF0 = {
 			isa = PBXGroup;
 			children = (
 				227848FC1FD556E500C3EFF0 /* TRANSIT */,
-				227849111FD556E600C3EFF0 /* TRANSITTests */,
-				2278491C1FD556E600C3EFF0 /* TRANSITUITests */,
 				227848FB1FD556E500C3EFF0 /* Products */,
+				195C603DAECAA977A2192E45 /* Pods */,
+				528148E38BC557E162D315A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,32 +128,66 @@
 		227848FC1FD556E500C3EFF0 /* TRANSIT */ = {
 			isa = PBXGroup;
 			children = (
-				227848FD1FD556E500C3EFF0 /* AppDelegate.swift */,
-				227848FF1FD556E500C3EFF0 /* ViewController.swift */,
-				227849011FD556E500C3EFF0 /* Main.storyboard */,
-				227849041FD556E500C3EFF0 /* Assets.xcassets */,
-				227849061FD556E500C3EFF0 /* LaunchScreen.storyboard */,
+				2253E11F1FD6ED5D000C776B /* TRANSIT.entitlements */,
+				227849441FD57D7C00C3EFF0 /* GoogleService-Info.plist */,
 				227849091FD556E500C3EFF0 /* Info.plist */,
+				227849341FD56BC500C3EFF0 /* Models */,
+				227849331FD56BBB00C3EFF0 /* Controllers */,
+				227849351FD56BCE00C3EFF0 /* Layouts */,
+				227849321FD56BA600C3EFF0 /* Other */,
+				2204C6521FDBFDD900510813 /* Media.xcassets */,
 			);
 			path = TRANSIT;
 			sourceTree = "<group>";
 		};
-		227849111FD556E600C3EFF0 /* TRANSITTests */ = {
+		227849321FD56BA600C3EFF0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				227849121FD556E600C3EFF0 /* TRANSITTests.swift */,
-				227849141FD556E600C3EFF0 /* Info.plist */,
+				227848FD1FD556E500C3EFF0 /* AppDelegate.swift */,
 			);
-			path = TRANSITTests;
+			path = Other;
 			sourceTree = "<group>";
 		};
-		2278491C1FD556E600C3EFF0 /* TRANSITUITests */ = {
+		227849331FD56BBB00C3EFF0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2278491D1FD556E600C3EFF0 /* TRANSITUITests.swift */,
-				2278491F1FD556E600C3EFF0 /* Info.plist */,
+				2278493F1FD5759C00C3EFF0 /* LoginViewController.swift */,
+				227849461FD57FD400C3EFF0 /* FindStationViewController.swift */,
+				227849481FD585AC00C3EFF0 /* ResultsTableViewController.swift */,
+				2278494A1FD585CB00C3EFF0 /* StationDetailViewController.swift */,
 			);
-			path = TRANSITUITests;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		227849341FD56BC500C3EFF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2253E1201FD6F020000C776B /* User.swift */,
+				2275B8121FD7DF6B00117948 /* StopInfo.swift */,
+				2204C6501FDBF1C600510813 /* FirebaseStation.swift */,
+				2275B8141FD7EDD100117948 /* StopArrivalTimes.swift */,
+				2275B8161FD7F5A100117948 /* RequestController.swift */,
+				222042221FD81DFF0009DE4D /* URLHelpers.swift */,
+				22FAA7721FDD9AB5006DEDDC /* arrivalTimeTableViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		227849351FD56BCE00C3EFF0 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				227849011FD556E500C3EFF0 /* Main.storyboard */,
+				227849061FD556E500C3EFF0 /* LaunchScreen.storyboard */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		528148E38BC557E162D315A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				239FCA14461FEC7D32BF409D /* libPods-TRANSIT.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 227849221FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSIT" */;
 			buildPhases = (
+				324C1C0F287A6BE53F318B31 /* [CP] Check Pods Manifest.lock */,
 				227848F61FD556E500C3EFF0 /* Sources */,
 				227848F71FD556E500C3EFF0 /* Frameworks */,
 				227848F81FD556E500C3EFF0 /* Resources */,
+				82733A0EB04774C9A0CAEAD6 /* [CP] Embed Pods Frameworks */,
+				ADDDC0A7A988DACE6E288B06 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +262,11 @@
 					227848F91FD556E500C3EFF0 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					2278490D1FD556E600C3EFF0 = {
 						CreatedOnToolsVersion = 9.1;
@@ -233,7 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				227849081FD556E500C3EFF0 /* LaunchScreen.storyboard in Resources */,
-				227849051FD556E500C3EFF0 /* Assets.xcassets in Resources */,
+				227849451FD57D7C00C3EFF0 /* GoogleService-Info.plist in Resources */,
+				2204C6531FDBFDD900510813 /* Media.xcassets in Resources */,
 				227849031FD556E500C3EFF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +328,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		324C1C0F287A6BE53F318B31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82733A0EB04774C9A0CAEAD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRANSIT/Pods-TRANSIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADDDC0A7A988DACE6E288B06 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRANSIT/Pods-TRANSIT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		227848F61FD556E500C3EFF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227849001FD556E500C3EFF0 /* ViewController.swift in Sources */,
+				227849491FD585AC00C3EFF0 /* ResultsTableViewController.swift in Sources */,
+				2204C6511FDBF1C600510813 /* FirebaseStation.swift in Sources */,
+				227849401FD5759C00C3EFF0 /* LoginViewController.swift in Sources */,
+				2275B8151FD7EDD100117948 /* StopArrivalTimes.swift in Sources */,
+				2253E1211FD6F020000C776B /* User.swift in Sources */,
+				2275B8131FD7DF6B00117948 /* StopInfo.swift in Sources */,
+				227849471FD57FD400C3EFF0 /* FindStationViewController.swift in Sources */,
 				227848FE1FD556E500C3EFF0 /* AppDelegate.swift in Sources */,
+				22FAA7731FDD9AB5006DEDDC /* arrivalTimeTableViewCell.swift in Sources */,
+				222042231FD81DFF0009DE4D /* URLHelpers.swift in Sources */,
+				2278494B1FD585CB00C3EFF0 /* StationDetailViewController.swift in Sources */,
+				2275B8171FD7F5A100117948 /* RequestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227849131FD556E600C3EFF0 /* TRANSITTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2278491E1FD556E600C3EFF0 /* TRANSITUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +554,10 @@
 		};
 		227849231FD556E600C3EFF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BEBDD15FF442FADFC38F229 /* Pods-TRANSIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TRANSIT/TRANSIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BWBL7BSQ3;
 				INFOPLIST_FILE = TRANSIT/Info.plist;
@@ -439,8 +571,10 @@
 		};
 		227849241FD556E600C3EFF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACE7FFA7E3B4A1416237765 /* Pods-TRANSIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TRANSIT/TRANSIT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BWBL7BSQ3;
 				INFOPLIST_FILE = TRANSIT/Info.plist;
