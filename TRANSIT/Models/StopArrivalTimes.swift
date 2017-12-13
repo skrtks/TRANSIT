@@ -7,16 +7,11 @@
 //
 
 import Foundation
-import Firebase
 
+// Struct that stores information about arriving trains from TFL API.
 struct ArrivingTrain: Decodable {
     var lineName: String
     var towards: String
     var platformName: String
     var timeToStation: Int
 }
-
-//struct ArrivingTrains: Decodable {
-//    var arrivingTrains: [ArrivingTrain]
-//}
-

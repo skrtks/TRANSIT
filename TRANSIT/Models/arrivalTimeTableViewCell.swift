@@ -9,6 +9,11 @@
 import UIKit
 
 class arrivalTimeTableViewCell: UITableViewCell {
+    /* Updates the arriving train table custom cell.
+    */
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var cellTimeLabel: UILabel!
     @IBOutlet weak var cellPlatformLabel: UILabel!
     @IBOutlet weak var cellNameLabel: UILabel!
@@ -25,10 +30,13 @@ class arrivalTimeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Update the farriving train cell.
     func update(with train: ArrivingTrain) {
         cellTimeLabel.text = String(train.timeToStation/60) + " min"
-        cellNameLabel.text = train.lineName + " > " + train.towards
+        cellNameLabel.text = train.towards
         cellPlatformLabel.text = train.platformName
+        let imageName = train.lineName
+        cellImageView.image = UIImage(named: imageName)
     }
 
 }

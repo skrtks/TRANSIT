@@ -15,13 +15,41 @@ class ResultsTableViewController: UITableViewController {
     var searchQuery: String!
     var searchResults: Matches!
     
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Show network indicator.
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         RequestController.shared.searchForStop(name: searchQuery) { (matches) in
             self.updateUI(with: matches)
         }
         
+    }
+    
+    // Update the UI with fresh data.
+    func updateUI(with matches: Matches) {
+        // Make sure that refreshing is done in main queue.
+        DispatchQueue.main.async {
+            self.searchResults = matches
+            self.tableSize = self.searchResults.matches.count
+            self.tableView.reloadData()
+            
+            // Hide network indicator.
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
+    }
+    
+    // Prepare for segue to detail view.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailSegue" {
+            let stationDetailViewController = segue.destination as! StationDetailViewController
+            let indexPath = tableView.indexPathForSelectedRow!.row
+            
+            // Pass along station name (clipped from "underground station") and id.
+            let stationNameClipped = String(self.searchResults.matches[indexPath].name.dropLast(20))
+            stationDetailViewController.stationId = self.searchResults.matches[indexPath].id
+            stationDetailViewController.stationName = stationNameClipped
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,48 +57,25 @@ class ResultsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Methods
     
-    func updateUI(with matches: Matches) {
-        DispatchQueue.main.async {
-            self.searchResults = matches
-            self.tableSize = self.searchResults.matches.count
-//            print("!!!!!!!!!!!!!!!!!!!!")
-//            print(self.searchQuery)
-//            print(self.searchResults.matches)
-//            print("!!!!!!!!!!!!!!!!!!!!")
-            self.tableView.reloadData()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetailSegue" {
-            let stationDetailViewController = segue.destination as! StationDetailViewController
-            let indexPath = tableView.indexPathForSelectedRow!.row
-            let stationNameClipped = String(self.searchResults.matches[indexPath].name.dropLast(20))
-            stationDetailViewController.stationId = self.searchResults.matches[indexPath].id
-            stationDetailViewController.stationName = stationNameClipped
-        }
-    }   
-
-
     // MARK: - Table view data source
-
+    
+    // Set number of sections.
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
+    // Set number of rows.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return tableSize
     }
 
-    
+    // Configure the cell.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseStationCell", for: indexPath)
-        cell.textLabel?.text = searchResults.matches[indexPath.row].name
+        cell.textLabel?.text = String(searchResults.matches[indexPath.row].name.dropLast(20))
 
         return cell
     }

@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import Firebase
 
+// Structs to store station details from TFL API.
 struct Match: Decodable {
     var id: String
     var name: String

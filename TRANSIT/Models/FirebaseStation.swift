@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 
+// Struct for saving favourite station data to firebase.
 struct FirebaseStation {
     let key: String
     let ref: DatabaseReference?

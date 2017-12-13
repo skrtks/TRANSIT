@@ -52,13 +52,13 @@
 		2275B8121FD7DF6B00117948 /* StopInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfo.swift; sourceTree = "<group>"; };
 		2275B8141FD7EDD100117948 /* StopArrivalTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopArrivalTimes.swift; sourceTree = "<group>"; };
 		2275B8161FD7F5A100117948 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
-		227848FA1FD556E500C3EFF0 /* TRANSIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRANSIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		227848FA1FD556E500C3EFF0 /* Tubetime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tubetime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227848FD1FD556E500C3EFF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227849021FD556E500C3EFF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		227849071FD556E500C3EFF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227849091FD556E500C3EFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2278490E1FD556E600C3EFF0 /* TRANSITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRANSITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		227849191FD556E600C3EFF0 /* TRANSITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRANSITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2278490E1FD556E600C3EFF0 /* TubetimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubetimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		227849191FD556E600C3EFF0 /* TubetimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubetimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2278493F1FD5759C00C3EFF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		227849441FD57D7C00C3EFF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		227849461FD57FD400C3EFF0 /* FindStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindStationViewController.swift; path = TRANSIT/Controllers/FindStationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -118,9 +118,9 @@
 		227848FB1FD556E500C3EFF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				227848FA1FD556E500C3EFF0 /* TRANSIT.app */,
-				2278490E1FD556E600C3EFF0 /* TRANSITTests.xctest */,
-				227849191FD556E600C3EFF0 /* TRANSITUITests.xctest */,
+				227848FA1FD556E500C3EFF0 /* Tubetime.app */,
+				2278490E1FD556E600C3EFF0 /* TubetimeTests.xctest */,
+				227849191FD556E600C3EFF0 /* TubetimeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		227848F91FD556E500C3EFF0 /* TRANSIT */ = {
+		227848F91FD556E500C3EFF0 /* Tubetime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 227849221FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSIT" */;
+			buildConfigurationList = 227849221FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "Tubetime" */;
 			buildPhases = (
 				324C1C0F287A6BE53F318B31 /* [CP] Check Pods Manifest.lock */,
 				227848F61FD556E500C3EFF0 /* Sources */,
@@ -208,14 +208,14 @@
 			);
 			dependencies = (
 			);
-			name = TRANSIT;
+			name = Tubetime;
 			productName = TRANSIT;
-			productReference = 227848FA1FD556E500C3EFF0 /* TRANSIT.app */;
+			productReference = 227848FA1FD556E500C3EFF0 /* Tubetime.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2278490D1FD556E600C3EFF0 /* TRANSITTests */ = {
+		2278490D1FD556E600C3EFF0 /* TubetimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 227849251FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSITTests" */;
+			buildConfigurationList = 227849251FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TubetimeTests" */;
 			buildPhases = (
 				2278490A1FD556E600C3EFF0 /* Sources */,
 				2278490B1FD556E600C3EFF0 /* Frameworks */,
@@ -226,14 +226,14 @@
 			dependencies = (
 				227849101FD556E600C3EFF0 /* PBXTargetDependency */,
 			);
-			name = TRANSITTests;
+			name = TubetimeTests;
 			productName = TRANSITTests;
-			productReference = 2278490E1FD556E600C3EFF0 /* TRANSITTests.xctest */;
+			productReference = 2278490E1FD556E600C3EFF0 /* TubetimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		227849181FD556E600C3EFF0 /* TRANSITUITests */ = {
+		227849181FD556E600C3EFF0 /* TubetimeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 227849281FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSITUITests" */;
+			buildConfigurationList = 227849281FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TubetimeUITests" */;
 			buildPhases = (
 				227849151FD556E600C3EFF0 /* Sources */,
 				227849161FD556E600C3EFF0 /* Frameworks */,
@@ -244,9 +244,9 @@
 			dependencies = (
 				2278491B1FD556E600C3EFF0 /* PBXTargetDependency */,
 			);
-			name = TRANSITUITests;
+			name = TubetimeUITests;
 			productName = TRANSITUITests;
-			productReference = 227849191FD556E600C3EFF0 /* TRANSITUITests.xctest */;
+			productReference = 227849191FD556E600C3EFF0 /* TubetimeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +280,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 227848F51FD556E500C3EFF0 /* Build configuration list for PBXProject "TRANSIT" */;
+			buildConfigurationList = 227848F51FD556E500C3EFF0 /* Build configuration list for PBXProject "Tubetime" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -293,9 +293,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				227848F91FD556E500C3EFF0 /* TRANSIT */,
-				2278490D1FD556E600C3EFF0 /* TRANSITTests */,
-				227849181FD556E600C3EFF0 /* TRANSITUITests */,
+				227848F91FD556E500C3EFF0 /* Tubetime */,
+				2278490D1FD556E600C3EFF0 /* TubetimeTests */,
+				227849181FD556E600C3EFF0 /* TubetimeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,12 +415,12 @@
 /* Begin PBXTargetDependency section */
 		227849101FD556E600C3EFF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 227848F91FD556E500C3EFF0 /* TRANSIT */;
+			target = 227848F91FD556E500C3EFF0 /* Tubetime */;
 			targetProxy = 2278490F1FD556E600C3EFF0 /* PBXContainerItemProxy */;
 		};
 		2278491B1FD556E600C3EFF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 227848F91FD556E500C3EFF0 /* TRANSIT */;
+			target = 227848F91FD556E500C3EFF0 /* Tubetime */;
 			targetProxy = 2278491A1FD556E600C3EFF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -562,7 +562,7 @@
 				DEVELOPMENT_TEAM = 3BWBL7BSQ3;
 				INFOPLIST_FILE = TRANSIT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Kortekaas.TRANSIT;
+				PRODUCT_BUNDLE_IDENTIFIER = Kortekaas.Tubetime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -579,7 +579,7 @@
 				DEVELOPMENT_TEAM = 3BWBL7BSQ3;
 				INFOPLIST_FILE = TRANSIT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Kortekaas.TRANSIT;
+				PRODUCT_BUNDLE_IDENTIFIER = Kortekaas.Tubetime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,7 +599,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRANSIT.app/TRANSIT";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tubetime.app/Tubetime";
 			};
 			name = Debug;
 		};
@@ -616,7 +616,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRANSIT.app/TRANSIT";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tubetime.app/Tubetime";
 			};
 			name = Release;
 		};
@@ -655,7 +655,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		227848F51FD556E500C3EFF0 /* Build configuration list for PBXProject "TRANSIT" */ = {
+		227848F51FD556E500C3EFF0 /* Build configuration list for PBXProject "Tubetime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				227849201FD556E600C3EFF0 /* Debug */,
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		227849221FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSIT" */ = {
+		227849221FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "Tubetime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				227849231FD556E600C3EFF0 /* Debug */,
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		227849251FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSITTests" */ = {
+		227849251FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TubetimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				227849261FD556E600C3EFF0 /* Debug */,
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		227849281FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TRANSITUITests" */ = {
+		227849281FD556E600C3EFF0 /* Build configuration list for PBXNativeTarget "TubetimeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				227849291FD556E600C3EFF0 /* Debug */,

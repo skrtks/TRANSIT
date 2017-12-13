@@ -26,4 +26,5 @@ struct UserType {
     }
 }
 
+// Global var user so detail view can access user id.
 var globalUser: String!

@@ -10,17 +10,17 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    //MARK: Outlets
-    var user: UserType!
-    //let usersRef = Database.database().reference(withPath: "Users")
-    var returnedMatches: Matches!
-    
-    // Outlets for textfiels on login screen
+    // MARK: Outlets
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    // MARK: Properties
+    var user: UserType!
+    var returnedMatches: Matches!
+    
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,13 +33,58 @@ class LoginViewController: UIViewController {
         
         // Set emailField to become first responder.
         emailField.becomeFirstResponder()
+        
+        // Set UITableDelegate for both text fields.
+        self.emailField.delegate = self
+        self.passwordField.delegate = self
+    }
+    
+    // Hide the keyboard when touching oustide keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // When return key pressed:
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Continue to login field or sign the user in.
+        if emailField.isFirstResponder {
+            emailField.resignFirstResponder()
+            passwordField.becomeFirstResponder()
+        } else if passwordField.isFirstResponder {
+            LogInTapped(UITextField())
+        }
+        
+        return true
     }
     
     // MARK: Actions
     
     // Log the user in [Ray].
     @IBAction func LogInTapped(_ sender: Any) {
-        Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!)
+        // Perform log in.
+        Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!) { (user, error) in
+            
+            // Give user feedback when authentication failed
+            if error != nil {
+                UIView.animate(withDuration: 0.05, animations: {
+                    
+                    let shakeLeft = CGAffineTransform(translationX: -20, y: 0)
+                    self.emailField.transform = shakeLeft
+                    self.passwordField.transform = shakeLeft
+                }) { (_) in
+                    UIView.animate(withDuration: 0.05, animations: {
+                        let shakeRight = CGAffineTransform(translationX: 20, y: 0)
+                        self.emailField.transform = shakeRight
+                        self.passwordField.transform = shakeRight
+                    }) { (_) in
+                        UIView.animate(withDuration: 0.05, animations: {
+                            self.emailField.transform = CGAffineTransform.identity
+                            self.passwordField.transform = CGAffineTransform.identity
+                        })
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func RegisterTapped(_ sender: Any) {
@@ -62,24 +107,26 @@ class LoginViewController: UIViewController {
             }
         }
         
-            // Set cancel action and initiate alert in following lines.
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-            alert.addTextField  {textEmail in
-                textEmail.placeholder = "Enter your email"
-            }
-        
-            alert.addTextField {textPassword in
-                textPassword.isSecureTextEntry = true
-                textPassword.placeholder = "Enter Password"
-            }
-        
-            alert.addAction(saveAction)
-            alert.addAction(cancelAction)
-        
-            present(alert, animated: true, completion: nil)
+        // Set cancel action.
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    
+        alert.addTextField  {textEmail in
+            textEmail.placeholder = "Enter your email"
         }
     
+        alert.addTextField {textPassword in
+            textPassword.isSecureTextEntry = true
+            textPassword.placeholder = "Enter Password"
+        }
+        
+        // Set and show the alert.
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+    
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // Unwids to login and empties textfields for security reasons.
     @IBAction func unwindToLogin(unwindSegue: UIStoryboardSegue) {
         do {
             try Auth.auth().signOut()
@@ -90,9 +137,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // MARK: Methods
-    
-
     /*
     // MARK: - Navigation
 

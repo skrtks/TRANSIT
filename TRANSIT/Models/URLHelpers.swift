@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Create an extension that appends query items to URL
+// Extension that appends query items to URL
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true)

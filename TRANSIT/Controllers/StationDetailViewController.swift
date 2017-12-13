@@ -17,7 +17,6 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     // MARK: Properties
-    //var tableView: UITableView!
     let ref = Database.database().reference(withPath: "Users/" + globalUser + "/favStations")
     var user: UserType!
     var stationId: String!
@@ -26,14 +25,19 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     var arrivalData = [ArrivingTrain]()
     var refreshControl: UIRefreshControl!
 
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Make network indicator visible.
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        // Request arrival data.
         RequestController.shared.requestArrivalData(stopId: self.stationId) { (arrivingTrainsData) in
             self.updateUI(with: arrivingTrainsData)
         }
         
-        // Check if station is in favourites, update buttons accordingly
+        // Check if station is in favourites, update button accordingly
         ref.observe(.value, with: { snapshot in
             for item in snapshot.children {
                 if FirebaseStation(snapshot: item as! DataSnapshot).id == self.stationId {
@@ -46,31 +50,9 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh…")
         refreshControl.addTarget(self, action: #selector(self.reloadArrivalData), for: UIControlEvents.valueChanged)
-        arrivalTableview.addSubview(refreshControl) // not required when using UITableViewController
+        // Prevent refresh control showing over table.
+        arrivalTableview.backgroundView = refreshControl
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: Methods
-    // Update the save and trash buttons.
-    func updateBarButtons() {
-        if isSaved {
-            isSaved = false
-            self.saveButton.title = "Save Favourite"
-        } else {
-            isSaved = true
-            self.saveButton.title = "Remove Favourite"
-        }
-    }
-    
-    @objc func reloadArrivalData() {
-        RequestController.shared.requestArrivalData(stopId: self.stationId) { (arrivingTrainsData) in
-            self.updateUI(with: arrivingTrainsData)
-        }
     }
     
     // Update the user interface.
@@ -78,15 +60,46 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         self.arrivalData = trains
         DispatchQueue.main.async {
             self.stationNameLabel.text = self.stationName
+            
+            // Hide network indicator.
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            // Reload table.
             self.arrivalTableview.reloadData()
+            
+            // Hide refreshing control.
             self.refreshControl.endRefreshing()
             
         }
     }
     
+    // Update the star button.
+    func updateBarButtons() {
+        if isSaved {
+            isSaved = false
+            self.saveButton.image = UIImage(named: "Star")
+        } else {
+            isSaved = true
+            self.saveButton.image = UIImage(named: "Star_filled")
+        }
+    }
+    
+    // Reload arrival data upon request.
+    @objc func reloadArrivalData() {
+        RequestController.shared.requestArrivalData(stopId: self.stationId) { (arrivingTrainsData) in
+            self.updateUI(with: arrivingTrainsData)
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     // MARK: Actions
     
+    // Save or remove the favourite sation from Firebase.
     @IBAction func saveButtonTapped(_ sender: Any) {
         if self.isSaved {
             let stationToRemove = self.ref.child(stationName)
@@ -104,40 +117,31 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
  
     
     // MARK: - Table view data source
-    
+    // Set number of sections.
     func numberOfSections(in tableView: UITableView) -> Int {
 
         return 1
     }
     
+    // Set number of rows.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return arrivalData.count
     }
     
-    
+    // Configure cell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseLineCell", for: indexPath) as! arrivalTimeTableViewCell
-//        cell.textLabel?.text = arrivalData[indexPath.row].lineName + " towards " + arrivalData[indexPath.row].towards
         
         // Sort arrival data
         arrivalData.sort {
             $0.timeToStation < $1.timeToStation
         }
-//        cell.detailTextLabel?.text = String(arrivalData[indexPath.row].timeToStation/60) + " min"
+
         cell.update(with: arrivalData[indexPath.row])
         
         return cell
     }
-    
-//    func updateUI2() {
-//
-//        DispatchQueue.main.async {
-//            self.stationNameLabel.text = self.stationName
-//            print("????????????????????")
-//            print("????????????????????")
-//        }
-//    }
     
 
     /*
