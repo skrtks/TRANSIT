@@ -46,7 +46,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
             }
         })
         
-        // Initiate Pull to Refresh.
+        // Initiate Pull to Refresh (inspired on jandro_es on https://stackoverflow.com/questions/38184255/refresh-control-on-top-of-tableview-when-i-go-back-to-view-controller.)
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh…")
         refreshControl.addTarget(self, action: #selector(self.reloadArrivalData), for: UIControlEvents.valueChanged)
