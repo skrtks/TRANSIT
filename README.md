@@ -6,19 +6,22 @@ Tubetime is an app that lets you find tube station in London, view the arrival t
 
 #### Screenshots
 
-![Screenshot iOS](TRANSIT/ScreenShots/LoginScreen.png)
-![Screenshot iOS](TRANSIT/ScreenShots/FindStation.png)
-![Screenshot iOS](TRANSIT/ScreenShots/SearchResults.png)
-![Screenshot iOS](TRANSIT/ScreenShots/DetailScreen.png)
+![Screenshot iOS](ScreenShots/LoginScreen.png)
+![Screenshot iOS](ScreenShots/FindStation.png)
+![Screenshot iOS](ScreenShots/SearchResults.png)
+![Screenshot iOS](ScreenShots/DetailScreen.png)
 
-## Tests
-#### Works on
+
+## Works on
 
 Devices running IOS 11 or higher.
 
-## Contributors
+## Credits
 ### Artwork
 * Any credit to artists(music,images,...)
+
+### Firebase code
+* https://www.raywenderlich.com/139322/firebase-tutorial-getting-started-2
 
 ## Version 
 * Version 1.0
