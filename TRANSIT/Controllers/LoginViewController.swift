@@ -100,9 +100,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // Create new user in Firebase
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
             
-                // Log user in if no error [Ray]
+                // Log user in if no error [Ray] else show error message.
                 if error == nil {
                     Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!)
+                } else {
+                    let registerErrorAlert = UIAlertController(title: "Failed", message: "Failed signing you up, please try again. Make sure your password is 6+ characters.", preferredStyle: .alert)
+                    let dismiss = UIAlertAction(title: "Dismiss", style: .cancel)
+                    registerErrorAlert.addAction(dismiss)
+                    self.present(registerErrorAlert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }
@@ -116,7 +122,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
         alert.addTextField {textPassword in
             textPassword.isSecureTextEntry = true
-            textPassword.placeholder = "Enter Password"
+            textPassword.placeholder = "Enter Password (6+ long)"
         }
         
         // Set and show the alert.
