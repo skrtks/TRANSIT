@@ -104,7 +104,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if error == nil {
                     Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!)
                 } else {
-                    let registerErrorAlert = UIAlertController(title: "Failed", message: "Failed signing you up, please try again. Make sure your password is 6+ characters.", preferredStyle: .alert)
+                    let registerErrorAlert = UIAlertController(title: "Failed", message: error?.localizedDescription, preferredStyle: .alert)
                     let dismiss = UIAlertAction(title: "Dismiss", style: .cancel)
                     registerErrorAlert.addAction(dismiss)
                     self.present(registerErrorAlert, animated: true, completion: nil)
@@ -132,25 +132,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
     }
     
-    // Unwids to login and empties textfields for security reasons.
+    // Unwids to login.
     @IBAction func unwindToLogin(unwindSegue: UIStoryboardSegue) {
         do {
             try Auth.auth().signOut()
+            // Empties textfields for security reasons.
             emailField.text = ""
             passwordField.text = ""
         } catch {
-            print("Error logging out")
+            let logoutErrorAlert = UIAlertController(title: "Sign out failed", message: "Something went wrong logging you out...", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel)
+            logoutErrorAlert.addAction(dismiss)
+            self.present(logoutErrorAlert, animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

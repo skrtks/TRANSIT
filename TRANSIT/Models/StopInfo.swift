@@ -9,6 +9,7 @@
 import Foundation
 
 // Structs to store station details from TFL API.
+// This struct is used to save data that is returned by the search function of the api.
 struct Match: Decodable {
     var id: String
     var name: String

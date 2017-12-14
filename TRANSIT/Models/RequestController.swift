@@ -10,7 +10,7 @@ import Foundation
 
 class RequestController {
     
-    // Shared static is used to share the requestController among viewcontrollers [Ray].
+    // Shared static is used to share the requestController among viewcontrollers.
     static let shared = RequestController()
 
     // Searches for stop by its common name using the TFL API.

@@ -70,8 +70,8 @@ class FindStationViewController: UIViewController, UITableViewDelegate, UITableV
     // Update state of search button
     func updateSearchButton() {
         // set color values
-        let disabled = UIColor.init(red: 164/255, green: 205/255, blue: 255/255, alpha: 1.0)
-        let enabled = UIColor.init(red: 52/255, green: 94/255, blue: 242/255, alpha: 1.0)
+        let disabled = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+        let enabled = #colorLiteral(red: 0.26, green: 0.47, blue: 0.96, alpha: 1)
         // Disable search button if search field is empty
         if searchField.text == "" {
             searchButton.isEnabled = false
@@ -157,16 +157,4 @@ class FindStationViewController: UIViewController, UITableViewDelegate, UITableV
         // Deselect selected cell
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
