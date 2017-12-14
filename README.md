@@ -16,9 +16,6 @@ Version 1.0
 Devices running IOS 11 or higher.
 
 ## Credits
-### Artwork
-Any credit to artists(music,images,...)
-
 ### Firebase code
 https://www.raywenderlich.com/139322/firebase-tutorial-getting-started-2
 
