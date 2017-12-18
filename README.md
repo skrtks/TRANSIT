@@ -1,7 +1,7 @@
 # Tubetime
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/skrtks/TRANSIT?branch=master)](https://bettercodehub.com/)
-======
+
 ## Description
 
 Tubetime is an app that lets you find tube station in London, view the arrival times of trains that come through these stations, and favourite your regular stations for quick access.
